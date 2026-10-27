@@ -16,5 +16,6 @@ Recorded from Anthony's consultation notes, October 27, 2026. Design ideas are p
 - About: mission, organization background, approved staff names/roles/contact details.
 - Contact: shared email and message form with equivalent delivery to the existing Wix form.
 - Desired maintenance workflow: automatically display recent Facebook distribution announcements so leadership need not separately edit the website. Exact announcement Page/Group URL is pending. Confirm technical feasibility before promising an embedded feed.
-- First iteration uses one page with anchor navigation; separate pages can be introduced later if helpful.
+- Revised direction: three actual pages (Home, About, Contact), rather than single-page section navigation.
+- Revised design: green main background with contrasting light sections, larger visible text, large centered pantry name above a centered navbar, obvious navigation buttons, no placeholder plant logo, and less slogan-style copy. Retain the three ways-to-help cards and original grocery illustration without a text overlay.
 - Do not change the live domain or cancel Wix's website plan until the replacement and required integrations are tested and approved.

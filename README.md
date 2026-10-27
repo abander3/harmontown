@@ -1,6 +1,8 @@
-# Harmontown Food Pantry — first website iteration
+# Harmontown Food Pantry — version 2
 
-This is a hand-coded, single-page website for GitHub Pages. All styling, scripts, and the original grocery illustration are inside `index.html`. No installation, build command, paid template, external font, or photo download is required. Open `index.html` in a browser to preview it locally.
+This is a hand-coded, three-page website for GitHub Pages. Home is `index.html`, About is `about.html`, and Contact is `contact.html`. They share `styles.css` and `site.js`. The grocery illustration is embedded in the Home HTML. No installation, build command, paid template, external font, or photo download is required. Keep all five files together and open `index.html` in a browser to preview locally.
+
+Version 2 uses a green base, large centered pantry name, centered prominent navigation, larger body text, and lighter sections for contrast. The plant logo and image slogan overlay have been removed. Navigation loads actual pages. Ways-to-help cards are retained.
 
 ## Upload from the campus computer
 
@@ -11,11 +13,13 @@ This is a hand-coded, single-page website for GitHub Pages. All styling, scripts
 5. Wait for the deployment to finish. Open the URL shown in Pages settings, normally `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
 6. Test this preview URL before changing any Wix/domain settings. Do not set `harmontownfoodpantry.org` as the custom domain yet.
 
+When updating version 1, upload/replace `index.html` and add `about.html`, `contact.html`, `styles.css`, and `site.js` in the same commit. Uploading only `index.html` will leave the new design without its stylesheet/script and the other pages.
+
 No terminal or personal computer is needed for this upload. Do not upload the ZIP itself as your website; upload its extracted contents. `PROJECT-BRIEF.md` can be kept outside the public repository if desired.
 
 ## What is working now
 
-- Responsive desktop/mobile layout, sticky navigation, mobile menu, section links, and smooth anchor scrolling.
+- Responsive desktop/mobile layout with a large centered title and always-visible Home, About, Contact, and Donate navigation. Home/About/Contact load separate pages; distribution links go to the relevant Home section.
 - Donation calls to action in the header, opening section, help section, and donation band.
 - Honest donation placeholder dialog; it collects no payment.
 - Distribution placeholder with directions and a contact fallback. No fabricated dates.
@@ -28,7 +32,7 @@ No terminal or personal computer is needed for this upload. Do not upload the ZI
 
 ## Configuration
 
-Search `index.html` for `const SITE =`. It contains public settings for the campaign URL, announcement source, selected video, optional confirmed distribution date, and form endpoint. **Never put passwords, private API keys, bank information, Wix credentials, or Givebutter admin tokens in this file or repository.** Public widget embed identifiers are different from private credentials.
+Search `site.js` for `const SITE =`. It contains public settings for the campaign URL, announcement source, selected video, optional confirmed distribution date, and form endpoint. **Never put passwords, private API keys, bank information, Wix credentials, or Givebutter admin tokens in this file or repository.** Public widget embed identifiers are different from private credentials.
 
 ### Givebutter
 
@@ -40,7 +44,7 @@ For the embedded experience requested:
 2. Install its supplied loader script **once**, as directed by Givebutter. Do not paste an entire Wix page or Wix-generated wrapper code.
 3. Replace the fallback button inside `id="givebutter-nav"` with the official button widget markup. Keep the widget narrow enough for mobile navigation.
 4. Optionally paste the official donation form markup inside `id="givebutter-form-slot"`. Remove the adjacent fallback button when it becomes redundant.
-5. Set `donationUrl` as a fallback even if the widget is installed. Update the nearby “Givebutter connection pending” text as appropriate.
+5. The navigation is repeated in all three HTML files: install its widget on each page, and include the official loader once per page as directed. Set `donationUrl` in shared `site.js` as a fallback even if the widget is installed. Update the nearby “Givebutter connection pending” text as appropriate.
 6. Test the published GitHub Pages site on mobile and while logged out. The preview currently contains no Givebutter loader or real widget ID.
 
 ### Facebook distribution announcements
@@ -70,9 +74,9 @@ For direct delivery, configure a form service owned by the pantry and verified t
 
 ### Real images and staff
 
-Replace the SVG inside `id="hero-image-slot"` with an image, for example `<img src="assets/pantry-shelves.jpg" alt="Food stocked on shelves at Harmontown Food Pantry" style="width:100%;height:100%;object-fit:cover">`. Upload the asset at that relative path. Update the figure caption and alt text to match the actual image. Relative paths work both on a GitHub project preview and a custom domain.
+In `index.html`, replace the SVG inside `id="hero-image-slot"` with an image, for example `<img src="assets/pantry-shelves.jpg" alt="Food stocked on shelves at Harmontown Food Pantry" style="width:100%;height:100%;object-fit:cover">`. Upload the asset at that relative path. Update the figure caption and alt text to match the actual image. Relative paths work both on a GitHub project preview and a custom domain.
 
-Staff names and roles are intentionally not guessed. Replace the three staff placeholders with approved names, roles, and public contact details. The postal address is taken from the previous website; confirm it with leadership before launch. Confirm all copy and approximate impact figures.
+In `about.html`, staff names and roles are intentionally not guessed. Replace the three staff placeholders with approved names, roles, and public contact details. The postal address is taken from the previous website; confirm it with leadership before launch. Confirm all copy and approximate impact figures.
 
 ## Before calling it production-ready
 
@@ -89,4 +93,4 @@ Staff names and roles are intentionally not guessed. Replace the three staff pla
 
 ## Verification performed for this handoff
 
-JavaScript syntax and HTML structure/local navigation were checked programmatically. The page was not verified in a real browser during this handoff. Placeholder integrations have deliberately not been represented as working connections. Test the published GitHub Pages preview on your phone and desktop; share screenshots for the next design pass.
+JavaScript syntax, per-page unique IDs, cross-page links/fragment targets, expected local assets, and a single primary heading per page were checked programmatically. The page was not verified in a real browser during this handoff. Placeholder integrations have deliberately not been represented as working connections. Test the published GitHub Pages preview on your phone and desktop; share screenshots for the next design pass.
